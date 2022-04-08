@@ -1,0 +1,17 @@
+{
+  "name": "webpack-demos",
+  "version": "1.0.0",
+  "description": "This repo is a collection of simple demos of Webpack5.",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "keywords": [
+    "build",
+    "demo",
+    "webpack"
+  ],
+  "author": "Huang Junwen",
+  "license": "ISC",
+  "repository": "blackstone86/webpack-demos"
+}
