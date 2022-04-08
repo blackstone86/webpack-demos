@@ -12,6 +12,6 @@
     "webpack"
   ],
   "author": "Huang Junwen",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "blackstone86/webpack-demos"
 }
