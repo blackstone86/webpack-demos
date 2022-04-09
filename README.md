@@ -3,8 +3,7 @@ This repo is a collection of simple demos of Webpack5.
 These demos are purposely written in a simple and clear style. Each of them can be compiled independently and keep all dependencies up-to-date. You will find no difficulty in following them to learn the powerful tool.
 
 ## Index
-
-1. [Install webpack5](#demo01-install-webpack5)
+1. [Install webpack5](#tree/main/demo01)
 1. [Use loader](#demo02-use-loader)
 1. [Use plugin](#demo03-use-plugin)
 1. [Use devserver](#demo04-use-devserver)
@@ -24,6 +23,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Compile support server-side-rendering and client-side-rendering](#demo18-Compile-support-server-side-rendering-and-client-side-rendering)
 1. [Compile electron18 application with react18](#demo19-compile-electron18-application-with-react18)
 1. [Compile npm package with react18](#demo20-compile-npm-package-with-react18)
+1. [Compile progressive web application](#demo21-compile-progressive-web-application)
 
 ## License
 
