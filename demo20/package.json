@@ -1,7 +1,7 @@
 {
   "name": "hello-webpack5",
-  "version": "0.0.1",
-  "description": "a npm package build from blackstone86/webpack-demos repo's demo20",
+  "version": "0.0.2",
+  "description": "A simple npm package for learning webpack5.",
   "keywords": [
     "webpack",
     "npm",
@@ -17,7 +17,7 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "pub": "pnpm publish"
   },
   "dependencies": {
@@ -33,7 +33,6 @@
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.0",
-    "style-loader": "^3.3.1",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2"
   }
