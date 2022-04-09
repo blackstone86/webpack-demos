@@ -1,6 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
-import HelloWebpack from 'hello-webpack';
-import 'hello-webpack/lib/index.css';
+import { createRoot } from 'react-dom/client';
+import HelloWebpack from 'hello-webpack5';
+import 'hello-webpack5/lib/index.css';
 
-render(<HelloWebpack/>, window.document.getElementById('app'));
+const container = window.document.getElementById('app');
+const root = createRoot(container);
+// 在 Root 节点上渲染根组件
+root.render(<HelloWebpack />);

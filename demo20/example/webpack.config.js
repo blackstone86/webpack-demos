@@ -12,6 +12,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css/,// 增加对 CSS 文件的支持
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.js$/,
         use: ['babel-loader'],
         // 排除 node_modules 目录下的文件，node_modules 目录下的文件都是采用的 ES5 语法，没必要再通过 Babel 去转换
