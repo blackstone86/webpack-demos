@@ -6,7 +6,7 @@ specifiers:
   '@babel/preset-react': ^7.16.7
   babel-loader: ^8.2.4
   css-loader: ^6.7.1
-  hello-webpack5: 0.0.1
+  hello-webpack5: ^0.0.2
   react: ^18.0.0
   react-dom: ^18.0.0
   style-loader: ^3.3.1
@@ -14,7 +14,7 @@ specifiers:
   webpack-cli: ^4.9.2
 
 dependencies:
-  hello-webpack5: 0.0.1
+  hello-webpack5: 0.0.2
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
 
@@ -1829,8 +1829,8 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /hello-webpack5/0.0.1:
-    resolution: {integrity: sha512-0L3BjlPCIbYiBubgI42nshyeC++Ox2t2fOD6h/8OZP8+ZfMRdXrLtvCgLwGi1jfOzlf92i5y7LbMwWksMYaHrg==}
+  /hello-webpack5/0.0.2:
+    resolution: {integrity: sha512-LEPt+htJlcQNaYgabRzSfXbQq7BrQ8EcXLpxJcmL5oMgaZstB0zM3p9nZJ9WlXAkf3F6zm9lJfyG8agEjyi+kw==}
     dependencies:
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
