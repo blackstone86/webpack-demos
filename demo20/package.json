@@ -1,0 +1,40 @@
+{
+  "name": "hello-webpack5",
+  "version": "0.0.1",
+  "description": "a npm package build from blackstone86/webpack-demos repo's demo20",
+  "keywords": [
+    "webpack",
+    "npm",
+    "package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blackstone86/webpack-demos.git",
+    "directory": "demo20"
+  },
+  "author": "Huang Junwen",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "pub": "pnpm publish"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.17.9",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
