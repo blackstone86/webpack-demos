@@ -22,7 +22,8 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Compile single page application](#demo16-compile-single-page-application)
 1. [Compile multi page application](#demo17-compile-multi-page-application)
 1. [Compile support server-side-rendering and client-side-rendering](#demo18-Compile-support-server-side-rendering-and-client-side-rendering)
-1. [Compile electron application with react18](#demo19-compile-electron-application-with-react18)
+1. [Compile electron18 application with react18](#demo19-compile-electron18-application-with-react18)
+1. [Compile npm package with react18](#demo20-compile-npm-package-with-react18)
 
 ## License
 
