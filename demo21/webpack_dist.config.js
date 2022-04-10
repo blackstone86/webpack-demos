@@ -5,7 +5,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const { WebPlugin } = require('web-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DefinePlugin = require('webpack/lib/DefinePlugin');
+// const DefinePlugin = require('webpack/lib/DefinePlugin');
 // const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const OfflinePlugin = require('@lcdp/offline-plugin');
 
@@ -67,12 +67,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `[name].css`, // 给输出的 CSS 文件名称加上 hash 值
     }),
-    new DefinePlugin({
+    // new DefinePlugin({
       // 定义 NODE_ENV 环境变量为 production 去除 react 代码中的开发时才需要的部分
       // 'process.env': {
       //   NODE_ENV: JSON.stringify('production')
       // }
-    }),
+    // }),
     new OfflinePlugin({
       safeToUseOptionalCaches: true, // 屏蔽 additional、optional 使用警告，使用这两个缓存模块建议保证每个缓存资源有一个唯一名称（如hash后缀）和资源请求URL永久有效
       caches: { // 配置缓存模块
