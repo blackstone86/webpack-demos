@@ -24,6 +24,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Compile electron18 application with react18](https://github.com/blackstone86/webpack-demos/tree/main/demo19)
 1. [Compile npm package with react18](https://github.com/blackstone86/webpack-demos/tree/main/demo20)
 1. [Compile progressive web application](https://github.com/blackstone86/webpack-demos/tree/main/demo21)
+1. [Use npm scripts](https://github.com/blackstone86/webpack-demos/tree/main/demo22)
 
 ## License
 
