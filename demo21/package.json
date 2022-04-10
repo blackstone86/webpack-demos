@@ -6,6 +6,7 @@
     "build": "webpack --config webpack_dist.config.js --mode=production"
   },
   "devDependencies": {
+    "@lcdp/offline-plugin": "^5.1.1",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
