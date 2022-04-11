@@ -23,8 +23,8 @@ module.exports = {
     extensions: ['js'],
   },
   module: {
-    // 独完整的 `react.min.js` 文件就没有采用模块化，忽略对 `react.min.js` 文件的递归解析处理
-    noParse: [/react\.min\.js$/],
+    // 独完整的 react.production.min.js react.development.js 文件就没有采用模块化，忽略这两个文件的递归解析处理
+    noParse: [/react\..*\.js$/],
     rules: [
       {
         // 如果项目源码中只有 js 文件就不要写成 /\.jsx?$/，提升正则表达式性能
@@ -41,7 +41,7 @@ module.exports = {
           }
         },
         // 只对项目根目录下的 src 目录中的文件采用 babel-loader
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, 'src')
       },
     ]
   },
