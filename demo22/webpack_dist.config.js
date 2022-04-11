@@ -13,7 +13,8 @@ module.exports = {
   },
   output: {
     filename: '[name]_[chunkhash:8].js',// 给输出的文件名称加上 hash 值
-    path: path.resolve(__dirname, './dist'),
+    publicPath: '',
+    // path: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
