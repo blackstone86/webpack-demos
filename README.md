@@ -27,6 +27,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Use npm scripts](https://github.com/blackstone86/webpack-demos/tree/main/demo22)
 1. [Start webpack with node.js api](https://github.com/blackstone86/webpack-demos/tree/main/demo23)
 1. [Custom http server like devserver](https://github.com/blackstone86/webpack-demos/tree/main/demo24)
+1. [Inline png](https://github.com/blackstone86/webpack-demos/tree/main/demo25)
 
 ## License
 
