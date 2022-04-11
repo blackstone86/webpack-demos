@@ -1,6 +1,7 @@
 const path = require('path');
 // const { WebPlugin } = require('web-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const svgToMiniDataURI = require('mini-svg-data-uri');
 
 module.exports = {
   // JS 执行入口文件
@@ -17,6 +18,12 @@ module.exports = {
         test: /\.svg$/,
         // use: ['raw-loader']
         type: 'asset/source',
+        generator: {
+          dataUrl: content => {
+            content = content.toString();
+            return svgToMiniDataURI(content);
+          }
+        }        
       }
     ]
   },
