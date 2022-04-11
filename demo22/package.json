@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --open --mode=development",
-    "build": "webpack --config webpack_dist.config.js --mode=production",
-    "pub": "npm run dist && rsync dist"
+    "build": "rm -rf dist && webpack --config webpack_dist.config.js --mode=production",
+    "pub": "npm run build && rm -rf public && mkdir public && rsync -r dist/* public/demo22"
   },
   "dependencies": {
     "react": "^18.0.0",
