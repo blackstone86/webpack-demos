@@ -32,6 +32,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Inline svg](https://github.com/blackstone86/webpack-demos/tree/main/demo27)
 1. [Inline compressed svg](https://github.com/blackstone86/webpack-demos/tree/main/demo28)
 1. [Improve compile performance by reduce the scope](https://github.com/blackstone86/webpack-demos/tree/main/demo29)
+1. [Improve compile performance by dll lib](https://github.com/blackstone86/webpack-demos/tree/main/demo30)
 
 ## License
 
