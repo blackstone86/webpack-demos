@@ -38,6 +38,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Enable hot module replacement for devserver](https://github.com/blackstone86/webpack-demos/tree/main/demo33)
 1. [Coding with environment variable](https://github.com/blackstone86/webpack-demos/tree/main/demo34)
 1. [Compress css](https://github.com/blackstone86/webpack-demos/tree/main/demo35)
+1. [Compress javascript](https://github.com/blackstone86/webpack-demos/tree/main/demo36)
 
 ## License
 
