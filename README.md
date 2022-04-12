@@ -35,6 +35,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Improve compile performance by dll lib](https://github.com/blackstone86/webpack-demos/tree/main/demo30)
 1. [Improve compile performance by multi threads](https://github.com/blackstone86/webpack-demos/tree/main/demo31) (It's **unnecessary** to use `thread-loader` or `happypack` in **webpack5**) 
 1. [Inject proxy client script manually for devserver](https://github.com/blackstone86/webpack-demos/tree/main/demo32)
+1. [Enable hot module replacement for devserver](https://github.com/blackstone86/webpack-demos/tree/main/demo33)
 
 ## License
 
