@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rm -rf dist && webpack --mode=production",
-    "dev": "webpack-dev-server --mode=production --no-client-overlay --no-client"
+    "dev": "webpack-dev-server --client-logging none --no-client-overlay --no-client --mode=production"
   },
   "dependencies": {
     "react": "^18.0.0",
