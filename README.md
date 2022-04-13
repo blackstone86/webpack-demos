@@ -40,6 +40,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Compress css](https://github.com/blackstone86/webpack-demos/tree/main/demo35)
 1. [Compress javascript and convert to es5](https://github.com/blackstone86/webpack-demos/tree/main/demo36)
 1. [Compress javascript and convert to es6](https://github.com/blackstone86/webpack-demos/tree/main/demo37)
+1. [publish assets to cdn](https://github.com/blackstone86/webpack-demos/tree/main/demo38)
 
 ## License
 
