@@ -43,6 +43,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [publish assets to cdn](https://github.com/blackstone86/webpack-demos/tree/main/demo38)
 1. [Use treeshaking by set production mode in webpack5](https://github.com/blackstone86/webpack-demos/tree/main/demo39)
 1. [Split react18 librarys and page's common styles](https://github.com/blackstone86/webpack-demos/tree/main/demo40)
+1. [Lazy load javascript](https://github.com/blackstone86/webpack-demos/tree/main/demo41)
 
 ## License
 
