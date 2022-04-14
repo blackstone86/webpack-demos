@@ -44,6 +44,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Use treeshaking by set production mode in webpack5](https://github.com/blackstone86/webpack-demos/tree/main/demo39)
 1. [Split react18 librarys and page's common styles](https://github.com/blackstone86/webpack-demos/tree/main/demo40)
 1. [Lazy load javascript](https://github.com/blackstone86/webpack-demos/tree/main/demo41)
+1. [Lazy load page component with react-router-dom6](https://github.com/blackstone86/webpack-demos/tree/main/demo42)
 
 ## License
 
