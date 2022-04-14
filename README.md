@@ -46,6 +46,7 @@ These demos are purposely written in a simple and clear style. Each of them can 
 1. [Lazy load javascript](https://github.com/blackstone86/webpack-demos/tree/main/demo41)
 1. [Lazy load page component with react-router-dom6](https://github.com/blackstone86/webpack-demos/tree/main/demo42)
 1. [Compile with scope hoisting and display optimization bailout info in teminal](https://github.com/blackstone86/webpack-demos/tree/main/demo43)
+1. [Generate stats.json for analysing compile performance](https://github.com/blackstone86/webpack-demos/tree/main/demo44)
 
 ## License
 
