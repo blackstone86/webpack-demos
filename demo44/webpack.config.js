@@ -6,6 +6,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const { WebPlugin } = require('web-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // html-webpack-plugin 需要页面提供的配置
 const pages = [
   {
@@ -118,7 +120,27 @@ module.exports = {
           }
         },
       }),
+      // 压缩输出的 CSS 代码
+      new CssMinimizerPlugin()
     ],
+    splitChunks: {
+      cacheGroups: {
+        // 提取 react 库
+        vendors: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+        // 提取页面公共样式
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          minChunks: pages.length,
+          enforce: true
+        }
+      }
+    }
   },
   plugins: [
     ...getPagePlugins(), // 一个 HtmlWebpackPlugin 对应一个 HTML 文件
@@ -127,10 +149,11 @@ module.exports = {
     }),
     new DefinePlugin({
       // 定义 NODE_ENV 环境变量为 production 去除 react 代码中的开发时才需要的部分
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+      // 'process.env': {
+      //   NODE_ENV: JSON.stringify('production')
+      // }
     }),
+    new BundleAnalyzerPlugin()
   ],
   devtool: 'source-map',
 };
