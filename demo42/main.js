@@ -1,4 +1,4 @@
-import React, {PureComponent, createElement} from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import PageHome from './pages/home';
