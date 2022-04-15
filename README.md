@@ -2,6 +2,30 @@ This repo is a collection of simple demos of Webpack5.
 
 These demos are purposely written in a simple and clear style. Each of them can be compiled independently and keep all dependencies up-to-date. You will find no difficulty in following them to learn the powerful tool.
 
+## How to use
+
+First, install [http-server](https://www.npmjs.com/package/http-server).
+
+```bash
+$ pnpm i -g http-server
+```
+
+Then, clone the repo.
+
+```bash
+$ git clone https://github.com/blackstone86/webpack-demos.git
+```
+
+Now, play with the source files under the repo's demo* directories.
+
+```bash
+$ cd demo01
+$ pnpm i
+$ pnpm serve
+```
+
+If the above command doesn't open your browser automatically, you have to visit http://127.0.0.1:8080/ by yourself.
+
 ## Index
 1. [Install webpack5](https://github.com/blackstone86/webpack-demos/tree/main/demo01)
 1. [Use loader](https://github.com/blackstone86/webpack-demos/tree/main/demo02)
