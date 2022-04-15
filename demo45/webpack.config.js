@@ -29,7 +29,7 @@ const pages = [
 function getPagePluginConfig({ pageName, trackingId }) {
   return { // 一个 HtmlWebpackPlugin 对应一个 HTML 文件
     inject: false,
-    template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
+    template: '../template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
     filename: `${pageName}.html`, // 输出的 HTML 的文件名称
     appMountIds: ['app', 'disqus_thread'],
     googleAnalytics: {
@@ -73,10 +73,11 @@ function getEntry(entrys) {
 
 // webpack 配置
 const webpackConfig = {
+  context: path.resolve(__dirname, 'src'),
   entry: getEntry(),
   output: {
-    filename: '[name]_[chunkhash:8].js',// 给输出的文件名称加上 hash 值
-    path: path.resolve(__dirname, './dist'),
+    filename: '[name]_[chunkhash:8].js', // 给输出的文件名称加上 hash 值
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     // 使用绝对路径指明第三方模块存放的位置，以减少搜索步骤
