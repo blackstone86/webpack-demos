@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   // JS 执行入口文件
   entry: './main.js',
   output: {
