@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "flow": "flow",
-    "build": "webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production",
+    "serve": "pnpm build && http-server -o ./dist -c-1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-flow": "^7.16.7",
     "babel-loader": "^8.2.4",
+    "html-webpack-plugin": "^5.5.0",
     "flow-bin": "^0.175.0",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2"

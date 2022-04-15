@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (env = {}, argv) {
 
@@ -34,13 +35,23 @@ module.exports = function (env = {}, argv) {
 
   const config = {
     // JS 执行入口文件
-    entry: './main.js',
+    entry: {
+      main: './main.js'
+    },
     output: {
       // 把所有依赖的模块合并输出到一个 bundle.js 文件
-      filename: 'bundle.js',
+      filename: '[name]_[chunkhash:8].js',
       // 输出文件都放到 dist 目录下
       path: path.resolve(__dirname, './dist'),
     },
+    plugins: [
+      new HtmlWebpackPlugin({ // 一个 HtmlWebpackPlugin 对应一个 HTML 文件
+        inject: false,
+        template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
+        filename: `index.html`, // 输出的 HTML 的文件名称
+        chunks: ['main']
+      })
+    ],
     // 在生成环境不输出 Source Map
     devtool: isProduction ? undefined : 'source-map',
   }
