@@ -31,7 +31,7 @@ function getPagePluginConfig({ pageName, trackingId }) {
     filename: `${pageName}.html`, // 输出的 HTML 的文件名称
     appMountIds: ['app', 'disqus_thread'],
     googleAnalytics: {
-      trackingId: 'UA-XXXX-XX',
+      trackingId,
       pageViewOnLoad: true
     },
     scripts: [
