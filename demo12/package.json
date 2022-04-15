@@ -2,13 +2,13 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production"
   },
   "dependencies": {
     "@types/react": "^16.0.2",
     "@types/react-dom": "^15.5.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "ts-loader": "^9.2.8",

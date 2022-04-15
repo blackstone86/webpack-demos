@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Component} from 'react';
-import {render} from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 class Button extends Component {
   render() {
@@ -8,4 +8,7 @@ class Button extends Component {
   }
 }
 
-render(<Button/>, window.document.getElementById('app'));
+const container = window.document.getElementById('app');
+const root = createRoot(container);
+// 在 Root 节点上渲染根组件
+root.render(<Button />);
