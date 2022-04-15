@@ -2,8 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode=production",
-    "build:dll": "webpack --config webpack_dll.config.js --mode=production"
+    "build": "webpack --mode production",
+    "build:dll": "webpack --config webpack_dll.config.js --mode production"
   },
   "dependencies": {
     "core-js": "^3.21.1",

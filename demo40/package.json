@@ -2,8 +2,7 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build_": "rm -rf dist && webpack --mode production --json > stats.json",
-    "build": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production --json > stats.json"
   },
   "dependencies": {
     "react": "^18.0.0",

@@ -2,8 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode=production",
-    "dev": "webpack-dev-server --client-logging none --no-client-overlay --no-client --mode=production"
+    "build": "rm -rf dist && webpack --mode production",
+    "dev": "webpack-dev-server --client-logging none --no-client-overlay --no-client --mode production"
   },
   "dependencies": {
     "react": "^18.0.0",
