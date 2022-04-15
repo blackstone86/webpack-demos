@@ -3,7 +3,7 @@
   "productName": "HelloWebpack",
   "version": "0.0.1",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode=development",
+    "build": "rm -rf dist && webpack --mode production",
     "run": "electron ."
   },
   "main": "main.js",

@@ -2,8 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack",
-    "flow": "flow"
+    "flow": "flow",
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

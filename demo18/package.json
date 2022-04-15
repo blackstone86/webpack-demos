@@ -2,8 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build:browser": "webpack --mode=development",
-    "build:server": "webpack --config webpack_server.config.js",
+    "build:browser": "webpack --mode production",
+    "build:server": "webpack --mode production --config webpack_server.config.js",
     "http_server": "node ./http_server.js"
   },
   "dependencies": {

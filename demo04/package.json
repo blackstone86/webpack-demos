@@ -2,7 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack-dev-server --mode=development --hot --devtool source-map"
+    "dev": "webpack-dev-server --mode development --hot --devtool source-map",
+    "build": "webpack-dev-server --mode production"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
