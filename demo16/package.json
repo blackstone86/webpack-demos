@@ -2,7 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --mode production",
+    "serve": "pnpm build && http-server -o ./dist -c-1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

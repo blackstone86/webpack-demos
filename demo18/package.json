@@ -2,9 +2,11 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build:browser": "webpack --mode production",
-    "build:server": "webpack --mode production --config webpack_server.config.js",
-    "http_server": "node ./http_server.js"
+    "build:browser": "rm -rf dist && webpack --mode production",
+    "serve:browser": "pnpm build:browser && http-server -o ./dist -c-1",
+    "build:server": "rm -rf dist && webpack --mode production --config webpack_server.config.js",
+    "serve:server": "pnpm build:server && start chrome http://localhost:3000/ && node ./http_server.js",
+    "serve": "pnpm serve:browser"
   },
   "dependencies": {
     "express": "^4.17.3",
@@ -17,6 +19,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
     "ignore-loader": "^0.1.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.71.0",
