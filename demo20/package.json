@@ -17,7 +17,8 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rm -rf lib && webpack --mode production",
+    "serve": "cd example && pnpm i && pnpm serve && cd ../",
     "pub": "pnpm publish"
   },
   "dependencies": {

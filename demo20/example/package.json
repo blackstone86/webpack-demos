@@ -2,7 +2,8 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode=development"
+    "build": "rm -rf dist && webpack --mode=development",
+    "serve": "pnpm build && http-server -o ./dist -c-1"
   },
   "dependencies": {
     "hello-webpack5": "^0.0.2",
@@ -16,6 +17,7 @@
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "style-loader": "^3.3.1",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2"
   }

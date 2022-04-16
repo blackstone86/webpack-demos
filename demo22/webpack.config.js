@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './main.js'// Chunk app 的 JS 执行入口文件
+    main: './main.js'// Chunk app 的 JS 执行入口文件
   },
   output: {
     filename: '[name]_[chunkhash:8].js',// 给输出的文件名称加上 hash 值
@@ -29,6 +29,7 @@ module.exports = {
       inject: false,
       template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
       appMountIds: ['app'],
+      chunks: ['main']
     }),
   ],
 };

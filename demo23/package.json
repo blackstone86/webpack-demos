@@ -2,10 +2,11 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "node ./webpack.js"
+    "build": "rm -rf dist && node ./webpack.js",
+    "serve": "pnpm build && http-server -o ./dist -c-1"
   },
-  "dependencies": {},
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2"
   }
