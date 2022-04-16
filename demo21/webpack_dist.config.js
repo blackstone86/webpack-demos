@@ -11,10 +11,10 @@ const OfflinePlugin = require('@lcdp/offline-plugin');
 
 module.exports = {
   entry: {
-    app: './main.js'// Chunk app 的 JS 执行入口文件
+    main: './main.js'// Chunk app 的 JS 执行入口文件
   },
   output: {
-    filename: '[name].js',// 给输出的文件名称加上 hash 值
+    filename: '[name]_[chunkhash:8].js',// 给输出的文件名称加上 hash 值
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -63,9 +63,10 @@ module.exports = {
       inject: false,
       template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
       appMountIds: ['app'],
+      chunks: ['main']
     }),
     new MiniCssExtractPlugin({
-      filename: `[name].css`, // 给输出的 CSS 文件名称加上 hash 值
+      filename: `[name]_[contenthash:8].css`, // 给输出的 CSS 文件名称加上 hash 值
     }),
     // new DefinePlugin({
       // 定义 NODE_ENV 环境变量为 production 去除 react 代码中的开发时才需要的部分
@@ -77,8 +78,8 @@ module.exports = {
       safeToUseOptionalCaches: true, // 屏蔽 additional、optional 使用警告，使用这两个缓存模块建议保证每个缓存资源有一个唯一名称（如hash后缀）和资源请求URL永久有效
       caches: { // 配置缓存模块
         main: [ // serviceworker install 事件中缓存资源，最早被缓存，缓存优先级最高，缓存应用最重要的资源（缺少会导致应用运行不了），一旦缓存失败会导致应用不缓存任何资源
-          'app.js',
-          'app.css',
+          'main_*.js',
+          'main_*.css',
           'index.html'
         ],
         additional: [ // serviceworker activate 事件中缓存资源，缓存时间晚于 main 缓存模块，优先级次于 main 缓存模块，一旦缓存失败会将缓存失败的资源迁移到 optional 模块
