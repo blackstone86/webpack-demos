@@ -8,7 +8,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app.module';
 
 const environment = {
-  production: false
+  production: true
 };
 
 if (environment.production) {
