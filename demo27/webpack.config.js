@@ -32,6 +32,7 @@ module.exports = {
       inject: false,
       template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
       appMountIds: ['app'],
+      chunks: ['main'],
     }),
   ]
 };
