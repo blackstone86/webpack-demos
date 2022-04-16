@@ -19,7 +19,7 @@ const devMiddlewareConf = {
   // 静态资源访问服务器的服务目录
   publicPath: '/',
   // 是否将打包结果写入到磁盘之中，true 时将编译结果输出到 ./dist 目录
-  writeToDisk: false,
+  writeToDisk: true,
   // 不打印构建信息，如 asset bundle.js 147 KiB [emitted] (name: main) 1 related asset ...
   stats: "none", // "none" | "summary" | "errors-only" | "errors-warnings" | "minimal" | "normal" | "detailed" | "verbose" | boolean | object { … }
 };

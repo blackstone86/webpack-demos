@@ -2,10 +2,11 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production"
+    "serve": "rm -rf dist && start chrome -o http://127.0.0.1:3000 && node server.js"
   },
   "devDependencies": {
     "express": "^4.17.3",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-middleware": "^5.3.1",
