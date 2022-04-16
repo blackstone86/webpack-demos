@@ -24,7 +24,7 @@ $ pnpm i
 $ pnpm serve
 ```
 
-If the above command doesn't open your browser automatically, you have to visit http://127.0.0.1:8080/ by yourself.
+If the above command doesn't open your browser automatically, you have to visit http://127.0.0.1:8080/ by yourself. besides, you should replace `//js.cdn.com/id/` publicPath with your real cdn address in demo38, otherwise, you will see nothing in the browser.
 
 ## Index
 1. [Install webpack5](https://github.com/blackstone86/webpack-demos/tree/main/demo01)
