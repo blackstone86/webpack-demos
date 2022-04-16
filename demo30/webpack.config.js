@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DllReferencePlugin = require('webpack/lib/DllReferencePlugin');
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     // 输出文件的名称
-    filename: '[name].js',
+    filename: '[name]_[chunkhash:8].js',
     // 输出文件都放到 dist 目录下
     path: path.resolve(__dirname, 'dist'),
   },
@@ -32,6 +33,18 @@ module.exports = {
     //   // 描述 polyfill 动态链接库的文件内容
     //   manifest: require('./dist/polyfill.manifest.json'),
     // }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
+      appMountIds: ['app'],
+      chunks: ['main'],
+      scripts: [
+        {
+          src: './react.dll.js',
+          // type: 'module'
+        }
+      ],
+    }),
   ],
   devtool: 'source-map'
 };
