@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rm -rf dist && webpack --mode production",
+    "serve": "pnpm build && http-server -o ./dist -c-1",
     "analyse": "rm -rf dist && webpack --mode production --env analyse --profile --json > stats.json"
   },
   "dependencies": {

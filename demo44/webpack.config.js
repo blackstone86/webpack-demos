@@ -153,7 +153,7 @@ module.exports = {
       //   NODE_ENV: JSON.stringify('production')
       // }
     }),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ],
   devtool: 'source-map',
 };
