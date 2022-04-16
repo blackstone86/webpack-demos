@@ -11,7 +11,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   entry: {
     // Chunk app 的 JS 执行入口文件
-    app: './main.js'
+    main: './main.js'
   },
   output: {
     // 给输出的 JavaScript 文件名称加上 Hash 值
@@ -80,7 +80,7 @@ module.exports = {
       template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
       filename: `index.html`, // 输出的 HTML 的文件名称
       appMountIds: ['app'],
-      chunks: ['app'],
+      chunks: ['main'],
     }),
     new MiniCssExtractPlugin({
       filename: `[name]_[contenthash:8].css`, // 给输出的 CSS 文件名称加上 hash 值

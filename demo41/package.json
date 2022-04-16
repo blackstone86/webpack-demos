@@ -2,7 +2,9 @@
   "name": "dive-into-webpack",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --mode production"
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "rm -rf dist && webpack --mode production",
+    "serve": "pnpm build && http-server -o ./dist -c-1"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
