@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     // 把所有依赖的模块合并输出到一个 bundle.js 文件
-    filename: '[name]_[chunkhash:8].js',
+    filename: '[name].js',
     // 输出文件都放到 dist 目录下
     path: path.resolve(__dirname, './dist'),
   },
@@ -39,5 +39,5 @@ module.exports = {
     }),
   ],
   // 输出 source-map 方便直接调试 ES6 源码
-  devtool: 'source-map',
+  // devtool: 'source-map',
 };

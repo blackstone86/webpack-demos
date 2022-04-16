@@ -1,5 +1,6 @@
 const path = require('path');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // JS 执行入口文件
@@ -16,6 +17,11 @@ module.exports = {
       // 'process.env': {
       //   NODE_ENV: JSON.stringify('production')
       // }
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
+      appMountIds: ['app'],
     }),
   ],
 };

@@ -1,6 +1,7 @@
 const path = require('path');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HappyPack = require('happypack');
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
   },
   output: {
     // 把所有依赖的模块合并输出到一个 bundle.js 文件
-    filename: '[name].js',
+    filename: '[name]_[chunkhash:8].js',
     // 输出文件都放到 dist 目录下
     path: path.resolve(__dirname, './dist'),
   },
@@ -42,7 +43,12 @@ module.exports = {
       loaders: ['babel-loader?cacheDirectory']
     }),
     new MiniCssExtractPlugin({
-      filename: `[name].css`,
+      filename: `[name]_[contenthash:8].css`,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
+      appMountIds: ['app'],
     }),
   ],
   devtool: 'source-map' // 输出 source-map 方便直接调试 ES6 源码
