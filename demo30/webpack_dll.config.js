@@ -1,11 +1,11 @@
-const path = require('path');
-const DllPlugin = require('webpack/lib/DllPlugin');
+const path = require('path')
+const DllPlugin = require('webpack/lib/DllPlugin')
 
 module.exports = {
   // JS 执行入口文件
   entry: {
     // 把 React 相关的放到一个单独的动态链接库
-    react: ['react', 'react-dom'],
+    react: ['react', 'react-dom']
     // 把项目需要所有的 polyfill 放到一个单独的动态链接库
     // polyfill: ['core-js/actual/object/assign', 'core-js/actual/promise', 'whatwg-fetch'],
   },
@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // 存放动态链接库的全局变量名称，例如对应 react 来说就是 _dll_react
     // 之所以在前面加上 _dll_ 是为了防止全局变量冲突
-    library: '_dll_[name]',
+    library: '_dll_[name]'
   },
   plugins: [
     // 接入 DllPlugin
@@ -26,7 +26,7 @@ module.exports = {
       // 例如 react.manifest.json 中就有 "name": "_dll_react"
       name: '_dll_[name]',
       // 描述动态链接库的 manifest.json 文件输出时的文件名称
-      path: path.join(__dirname, 'dist', '[name].manifest.json'),
-    }),
-  ],
-};
+      path: path.join(__dirname, 'dist', '[name].manifest.json')
+    })
+  ]
+}

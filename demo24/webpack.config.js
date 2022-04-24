@@ -1,6 +1,6 @@
-const path = require('path');
-const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -9,7 +9,7 @@ module.exports = {
       'webpack-hot-middleware/client',
       // JS 执行入口文件
       './src/main.js'
-    ],
+    ]
   },
   output: {
     // 把所有依赖的模块合并输出到一个 bundle.js 文件
@@ -24,8 +24,8 @@ module.exports = {
       inject: false,
       template: 'template.ejs', // HTML 模版文件所在的文件路径 https://github.com/jaketrent/html-webpack-template
       chunks: ['main'],
-      appMountIds: ['app'],
-    }),
+      appMountIds: ['app']
+    })
   ],
-  devtool: 'source-map',
-};
+  devtool: 'source-map'
+}

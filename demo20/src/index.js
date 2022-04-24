@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './index.css';
+import React, { Component } from 'react'
+import './index.css'
 
 // 导出该组件供给其它模块使用
 export default class HelloWebpack extends Component {

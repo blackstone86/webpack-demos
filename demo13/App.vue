@@ -5,18 +5,18 @@
 
 <!--样式描述-->
 <style scoped>
-  h1 {
-    color: red;
-  }
+h1 {
+  color: red;
+}
 </style>
 
 <!--组件逻辑-->
 <script>
-  export default {
-    data() {
-      return {
-        msg: 'Hello,Webpack'
-      }
+export default {
+  data() {
+    return {
+      msg: 'Hello,Webpack'
     }
   }
+}
 </script>

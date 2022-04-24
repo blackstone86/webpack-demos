@@ -1,3 +1,3 @@
-import str from './util.js';
+import str from './util.js'
 
-console.log(str);
+console.log(str)

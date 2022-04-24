@@ -1,13 +1,13 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HashRouter, Routes, Route, Link } from 'react-router-dom';
-import PageHome from './pages/home';
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
+import PageHome from './pages/home'
 // import PageAbout from './pages/about';
 // import PageLogin from './pages/login';
-const PageAbout = React.lazy(() => import("./pages/about"));
-const PageLogin = React.lazy(() => import("./pages/login"));
+const PageAbout = React.lazy(() => import('./pages/about'))
+const PageLogin = React.lazy(() => import('./pages/login'))
 // 异步加载过程显示的提示
-const Spinner = () => <div>loading...</div>;
+const Spinner = () => <div>loading...</div>
 
 // 根组件
 function App() {
@@ -15,11 +15,12 @@ function App() {
     <HashRouter>
       <div>
         <nav>
-          <Link to='/'>Home</Link> | <Link to='/about'>About</Link> | <Link to='/login'>Login</Link>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link> |{' '}
+          <Link to="/login">Login</Link>
         </nav>
-        <hr/>
+        <hr />
         <Routes>
-          <Route path='/' element={<PageHome />}/>
+          <Route path="/" element={<PageHome />} />
           {/* <Route path='/about' element={<PageAbout />}/>
           <Route path='/login' element={<PageLogin />}/> */}
           <Route
@@ -44,7 +45,7 @@ function App() {
   )
 }
 
-const container = window.document.getElementById('app');
-const root = createRoot(container);
+const container = window.document.getElementById('app')
+const root = createRoot(container)
 // 在 Root 节点上渲染根组件
-root.render(<App />);
+root.render(<App />)

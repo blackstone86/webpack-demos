@@ -1,1 +1,1 @@
-export default 'Hello,Webpack';
+export default 'Hello,Webpack'

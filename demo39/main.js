@@ -1,3 +1,3 @@
-import {funcA} from "./util";
+import { funcA } from './util'
 
-funcA();
+funcA()

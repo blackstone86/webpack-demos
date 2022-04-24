@@ -7,16 +7,15 @@ let win
 
 // 打开主窗口
 function createWindow() {
-
   // 创建浏览器窗口
-  win = new BrowserWindow({ 
-    width: 800, 
+  win = new BrowserWindow({
+    width: 800,
     height: 600,
     webPreferences: {
-			nodeIntegration: true,
+      nodeIntegration: true,
       contextIsolation: false,
-      enableRemoteModule: true,
-		}
+      enableRemoteModule: true
+    }
   })
 
   // 让渲染进程能获取到主进程模块，如 BrowserWindow app 等关键对象
@@ -27,8 +26,8 @@ function createWindow() {
   // win.webContents.openDevTools()
 
   // 加载应用的 index.html
-  const indexPageURL = `file://${__dirname}/dist/index.html`;
-  win.loadURL(indexPageURL);
+  const indexPageURL = `file://${__dirname}/dist/index.html`
+  win.loadURL(indexPageURL)
 
   // 当 window 被关闭，这个事件会被触发
   win.on('closed', () => {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 // 通过注解的方式描述清楚了这个视图组件所需的模版、样式、数据、逻辑。
 @Component({
@@ -10,5 +10,5 @@ import { Component } from '@angular/core';
   styles: ['h1{ color:red; }']
 })
 export class AppComponent {
-  msg = 'Hello,Webpack';
+  msg = 'Hello,Webpack'
 }

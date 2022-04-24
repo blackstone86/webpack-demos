@@ -1,6 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DllReferencePlugin = require('webpack/lib/DllReferencePlugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DllReferencePlugin = require('webpack/lib/DllReferencePlugin')
 
 module.exports = {
   entry: {
@@ -11,7 +11,7 @@ module.exports = {
     // 输出文件的名称
     filename: '[name]_[chunkhash:8].js',
     // 输出文件都放到 dist 目录下
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -19,15 +19,15 @@ module.exports = {
         // 项目源码使用了 ES6 和 JSX 语法，需要使用 babel-loader 转换
         test: /\.js$/,
         use: ['babel-loader'],
-        exclude: path.resolve(__dirname, 'node_modules'),
-      },
+        exclude: path.resolve(__dirname, 'node_modules')
+      }
     ]
   },
   plugins: [
     // 告诉 Webpack 使用了哪些动态链接库
     new DllReferencePlugin({
       // 描述 react 动态链接库的文件内容
-      manifest: require('./dist/react.manifest.json'),
+      manifest: require('./dist/react.manifest.json')
     }),
     // new DllReferencePlugin({
     //   // 描述 polyfill 动态链接库的文件内容
@@ -40,11 +40,11 @@ module.exports = {
       chunks: ['main'],
       scripts: [
         {
-          src: './react.dll.js',
+          src: './react.dll.js'
           // type: 'module'
         }
-      ],
-    }),
+      ]
+    })
   ],
   devtool: 'source-map'
-};
+}

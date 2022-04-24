@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import './index.css';
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import './index.css'
 
 class App extends Component {
   render() {
@@ -8,4 +8,4 @@ class App extends Component {
   }
 }
 
-render(<App/>, window.document.getElementById('app'));
+render(<App />, window.document.getElementById('app'))

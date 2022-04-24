@@ -1,20 +1,20 @@
-require('./main.css');
+require('./main.css')
 
-var OfflinePlugin = require('@lcdp/offline-plugin/runtime');
+var OfflinePlugin = require('@lcdp/offline-plugin/runtime')
 
 OfflinePlugin.install({
-  onInstalled: function() {
-    console.log('onInstalled');
+  onInstalled: function () {
+    console.log('onInstalled')
   },
-  onUpdating: function() {
-    console.log('onUpdating');
+  onUpdating: function () {
+    console.log('onUpdating')
   },
-  onUpdateReady: function() {
-    OfflinePlugin.applyUpdate();
+  onUpdateReady: function () {
+    OfflinePlugin.applyUpdate()
   },
-  onUpdated: function() {
-    window.location.reload();
+  onUpdated: function () {
+    window.location.reload()
   }
-});
+})
 
-window.document.getElementById('app').innerText = 'Hello,Webpack';
+window.document.getElementById('app').innerText = 'Hello,Webpack'

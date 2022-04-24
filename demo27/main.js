@@ -1,3 +1,3 @@
-import svgContent from './svgs/alert.svg';
+import svgContent from './svgs/alert.svg'
 
-window.document.getElementById('app').innerHTML = svgContent;
+window.document.getElementById('app').innerHTML = svgContent

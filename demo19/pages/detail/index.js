@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
+import React, { Component } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
   }
 }
 
-const container = window.document.getElementById('app');
-const root = createRoot(container);
+const container = window.document.getElementById('app')
+const root = createRoot(container)
 // 在 Root 节点上渲染根组件
-root.render(<App/>);
+root.render(<App />)
