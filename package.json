@@ -4,6 +4,7 @@
   "description": "This repo is a collection of simple demos of Webpack5.",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
     "commit": "git-cz"
   },
   "keywords": [
@@ -13,5 +14,8 @@
   ],
   "author": "Huang Junwen",
   "license": "MIT",
-  "repository": "blackstone86/webpack-demos"
+  "repository": "blackstone86/webpack-demos",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
 }
