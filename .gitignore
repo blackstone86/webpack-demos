@@ -5,4 +5,4 @@ TODOs.md
 *.log
 /.vscode/
 demo22/public
-stats.json
+**/*/stats.json
